@@ -1,0 +1,98 @@
+[
+     {
+          "catnr": "33821",
+          "min_distance_km": 6450.35,
+          "time": "2026-06-15T17:15:50Z",
+          "status": "green"
+     },
+     {
+          "catnr": "33901",
+          "min_distance_km": 4435.38,
+          "time": "2026-06-14T19:30:50Z",
+          "status": "yellow"
+     },
+     {
+          "catnr": "34383",
+          "min_distance_km": 1933.09,
+          "time": "2026-06-14T19:45:50Z",
+          "status": "yellow"
+     },
+     {
+          "catnr": "34410",
+          "min_distance_km": 2709.18,
+          "time": "2026-06-15T17:20:50Z",
+          "status": "yellow"
+     },
+     {
+          "catnr": "34478",
+          "min_distance_km": 10146.79,
+          "time": "2026-06-14T19:40:50Z",
+          "status": "green"
+     },
+     {
+          "catnr": "35443",
+          "min_distance_km": 6728.21,
+          "time": "2026-06-14T19:20:50Z",
+          "status": "green"
+     },
+     {
+          "catnr": "35602",
+          "min_distance_km": 5751.01,
+          "time": "2026-06-15T17:30:50Z",
+          "status": "green"
+     },
+     {
+          "catnr": "35891",
+          "min_distance_km": 2849.53,
+          "time": "2026-06-15T18:15:50Z",
+          "status": "yellow"
+     },
+     {
+          "catnr": "35901",
+          "min_distance_km": 12493.77,
+          "time": "2026-06-15T16:50:50Z",
+          "status": "green"
+     },
+     {
+          "catnr": "36470",
+          "min_distance_km": 8097.0,
+          "time": "2026-06-15T17:50:50Z",
+          "status": "green"
+     },
+     {
+          "catnr": "37966",
+          "min_distance_km": 3202.29,
+          "time": "2026-06-14T21:45:50Z",
+          "status": "yellow"
+     },
+     {
+          "catnr": "38487",
+          "min_distance_km": 3800.85,
+          "time": "2026-06-15T18:45:50Z",
+          "status": "yellow"
+     },
+     {
+          "catnr": "39554",
+          "min_distance_km": 4883.7,
+          "time": "2026-06-15T18:45:50Z",
+          "status": "yellow"
+     },
+     {
+          "catnr": "40223",
+          "min_distance_km": 1840.71,
+          "time": "2026-06-14T20:35:50Z",
+          "status": "yellow"
+     },
+     {
+          "catnr": "40237",
+          "min_distance_km": 8463.29,
+          "time": "2026-06-15T18:20:50Z",
+          "status": "green"
+     },
+     {
+          "catnr": "47059",
+          "min_distance_km": 9207.81,
+          "time": "2026-06-14T19:10:50Z",
+          "status": "green"
+     }
+]
