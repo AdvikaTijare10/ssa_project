@@ -1,6 +1,6 @@
 
 from datetime import datetime, timedelta, timezone
-from skyfield.api import load, EarthSatellite
+from skyfield.api import load, EarthSatellite,wgs84
 import requests
 
 start = datetime.now(timezone.utc)
@@ -34,27 +34,38 @@ objName, line1, line2 = get_tle(25544)
 
 iss_obj = EarthSatellite(line1, line2, objName, ts)
 
-for i in range(-90, 91, 5):
+for i in range(0,93,1):
+
     t = ts.from_datetime(start + timedelta(minutes=i))
 
     pos = iss_obj.at(t)
-    x, y, z = pos.position.km
+
+    subpoint = wgs84.subpoint(pos)
+
+    lat = subpoint.latitude.degrees
+    lon = subpoint.longitude.degrees
+    alt = subpoint.elevation.km
 
     iss_trail.append({
         "time": t.utc_iso(),
-        "x": float(x),
-        "y": float(y),
-        "z": float(z)
+        "latitude": float(lat),
+        "longitude": float(lon),
+        "altitude_km": float(alt)
     })
 
 pos = iss_obj.at(ts.from_datetime(start))
-x, y, z = pos.position.km
+
+subpoint = wgs84.subpoint(pos)
+
+lat = subpoint.latitude.degrees
+lon = subpoint.longitude.degrees
+alt = subpoint.elevation.km
 
 overtime_coord["iss"] = {
     "current_position": {
-        "x": float(x),
-        "y": float(y),
-        "z": float(z)
+        "latitude": float(lat),
+        "longitude": float(lon),
+        "altitude_km": float(alt)
     },
     "orbit_trail": iss_trail
 }
@@ -70,23 +81,32 @@ def calculate(result):
 
         trail = []
 
-        for i in range(-90, 91, 5):
+        for i in range(0,93,1):
 
             t = ts.from_datetime(start + timedelta(minutes=i))
 
             pos = sat.at(t)
 
-            x, y, z = pos.position.km
+            subpoint = wgs84.subpoint(pos)
+
+            lat = subpoint.latitude.degrees
+            lon = subpoint.longitude.degrees
+            alt = subpoint.elevation.km
 
             trail.append({
                 "time": t.utc_iso(),
-                "x": float(x),
-                "y": float(y),
-                "z": float(z)
+                "latitude": float(lat),
+                "longitude": float(lon),
+                "altitude_km": float(alt)
             })
 
         current_pos = sat.at(ts.from_datetime(start))
-        x, y, z = current_pos.position.km
+
+        subpoint = wgs84.subpoint(current_pos)
+
+        lat = subpoint.latitude.degrees
+        lon = subpoint.longitude.degrees
+        alt = subpoint.elevation.km
 
         overtime_coord["debris"].append({
 
@@ -97,9 +117,9 @@ def calculate(result):
             "closest_time": debris["time"],
 
             "current_position": {
-                "x": float(x),
-                "y": float(y),
-                "z": float(z)
+                "latitude": float(lat),
+                "longitude": float(lon),
+                "altitude_km": float(alt)
             },
 
             "orbit_trail": trail

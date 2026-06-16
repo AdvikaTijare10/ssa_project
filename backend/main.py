@@ -1,11 +1,11 @@
-from extracting_tle import get_tle_debris,get_tle_iss
-from EarthSatellite_objects import return_EarthSatellite_obj_iss,return_EarthSatellite_obj_debris
-from get_apogee_perigee import calculate_apogee_perigee_iss,calculate_apogee_perigee_debris
-from altitude_overlap_filter import altitude_filter
-from eci_calculate import calculate_xyz
-from visualization_data import calculate
+from backend.extracting_tle import get_tle_debris,get_tle_iss
+from backend.EarthSatellite_objects import return_EarthSatellite_obj_iss,return_EarthSatellite_obj_debris
+from backend.get_apogee_perigee import calculate_apogee_perigee_iss,calculate_apogee_perigee_debris
+from backend.altitude_overlap_filter import altitude_filter
+from backend.eci_calculate import calculate_xyz
+from backend.visualization_data import calculate
 from skyfield.api import load
-from euclidDistance import distances_between
+from backend.euclidDistance import distances_between
 from datetime import datetime, timedelta, timezone
 import json
 
