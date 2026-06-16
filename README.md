@@ -174,7 +174,7 @@ React + CesiumJS Dashboard
 
 ## Screenshots
 
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/4e3230d3-e8b4-412f-a7fe-3298cbbae45d" />
+<img width="1920" height="829" alt="Image" src="https://github.com/user-attachments/assets/deafa616-db6d-46a7-9448-6d66ec670ddc" />
 
 ---
 
